@@ -22,3 +22,5 @@ end
 
 gem 'bootstrap_form'
 gem "bootstrap-table-rails"
+
+gem 'puma'
