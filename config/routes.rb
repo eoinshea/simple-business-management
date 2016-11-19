@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
-  resources :jobs
-  root to: '/users/sign_in'
+
+
   devise_for :users
-  resources :users
+
+  devise_scope :user do
+    authenticated :user do
+      root 'jobs#index', as: :authenticated_root
+      resources :jobs
+    end
+
+    unauthenticated do
+      root 'devise/sessions#new', as: :unauthenticated_root
+    end
+  end
+
+
 end
