@@ -29,9 +29,9 @@
           <td><%= job.customer_details %></td>
           <td><%= job.job_description %></td>
           <td><%= job.contractor %></td>
-          <td><%= job.date_time %></td>
-          <td><%= link_to 'Edit', edit_job_path(job) %></td>
-          <td><%= link_to 'Delete', job, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-warning\' %></td>
+          <td><%= job.date_time.strftime('%a, %d %b %Y %H:%M:') %></td>
+          <td><%= link_to 'Edit', edit_job_path(job), class: 'btn btn-success' %></td>
+          <td><%= link_to 'Delete', job, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
         </tr>
     <% end %>
     <br>
