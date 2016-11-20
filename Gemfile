@@ -24,3 +24,5 @@ gem 'bootstrap_form'
 gem "bootstrap-table-rails"
 
 gem 'puma'
+
+gem 'active_scaffold'
