@@ -2,21 +2,11 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-    <div class="collapse navbar-collapse">
       <% if user_signed_in? %>
 
-          <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
+          <%= button_to 'Sign out', destroy_user_session_path,  class: 'btn btn-secondary' , :method=>'delete' %>
 
       <% end %>
-
-      <ul class="nav navbar-nav">
       </ul>
     </div>
   </div>
