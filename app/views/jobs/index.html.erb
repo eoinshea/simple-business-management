@@ -1,8 +1,12 @@
 <p id="notice"><%= notice %></p>
-<div class="container">
+<div class="container-fluid">
   <h1>Jobs</h1>
-
-  <table data-toggle="table">
+  </hr>
+  <br>
+  <%= button_to 'Add New Job', new_job_path, method: :get , class: 'btn btn-primary' %>
+  <br>
+  <div class="table-responsive">
+  <table class="table">
     <thead>
     <tr>
       <th>Customer details</th>
@@ -20,13 +24,13 @@
           <td><%= job.job_description %></td>
           <td><%= job.contractor %></td>
           <td><%= job.date_time %></td>
-          <td><%= link_to 'Show', job %></td>
           <td><%= link_to 'Edit', edit_job_path(job) %></td>
-          <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Delete', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
     <% end %>
     </tbody>
   </table>
+  </div>
   <br>
 </div>
 
